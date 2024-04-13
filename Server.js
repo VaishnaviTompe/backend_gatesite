@@ -92,9 +92,10 @@ mongoose.connection.on("connected", () => {
   console.log("DB connected");
 });
 
-app.use(cors({
-  origin: 'https://gatefe.azurewebsites.net'
-}));
+// app.use(cors({
+//   origin: 'https://gatefe.azurewebsites.net'
+// }));
+app.use(cors());
 app.use(bodyParser.json());
 
 app.use(require("./routes/user_route"));
