@@ -102,6 +102,11 @@ app.use(bodyParser.json());
 app.use(require("./routes/user_route"));
 app.use(require("./routes/quiz_route"));
 
+app.get("/", async (req, res) => {
+    res.send("Hello");
+
+});
+
 app.get("/getQuestion", async (req, res) => {
   try {
     const questions = await QuestionModel.find();
