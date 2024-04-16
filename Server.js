@@ -95,7 +95,8 @@ mongoose.connection.on("connected", () => {
 // app.use(cors({
 //   origin: 'https://gatefe.azurewebsites.net'
 // }));
-app.use(cors());
+// app.use(cors());
+app.use(cors({"origin": "*"}));
 app.use(bodyParser.json());
 
 app.use(require("./routes/user_route"));
